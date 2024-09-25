@@ -4,8 +4,8 @@ import inquirer from "inquirer"
 interface BankAccount{
     accountNumber: number;
     balance: number;
-    withdraw(amount: number): void
-    deposit(amount: number): void
+    withdraw(amount: number): void;
+    deposit(amount: number): void;
     checkBalance(): void
 
 }
@@ -41,7 +41,7 @@ deposit(amount: number): void {
 }
 //Check Balance 
 checkBalance(): void {
-    console.log(`current balance: $${this.balance}`);
+    console.log(`Current balance: $${this.balance}`);
 }
 }
 
@@ -91,7 +91,7 @@ async function service() {
             message: "Enter your account number:"
         })
         const customer = customers.find(customer => customer.account.accountNumber === accountNumberInput.accountNumber)
-        if(customers){
+        if(customer){
             console.log(`Welcome, ${customer.firstName} ${customer.lastName}!\n`);
             const ans = await inquirer.prompt([{
                 name: "select",

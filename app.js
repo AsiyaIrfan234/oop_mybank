@@ -27,7 +27,7 @@ class BankAccount {
     }
     //Check Balance 
     checkBalance() {
-        console.log(`current balance: $${this.balance}`);
+        console.log(`Current balance: $${this.balance}`);
     }
 }
 //Customer class
@@ -68,7 +68,7 @@ async function service() {
             message: "Enter your account number:"
         });
         const customer = customers.find(customer => customer.account.accountNumber === accountNumberInput.accountNumber);
-        if (customers) {
+        if (customer) {
             console.log(`Welcome, ${customer.firstName} ${customer.lastName}!\n`);
             const ans = await inquirer.prompt([{
                     name: "select",
